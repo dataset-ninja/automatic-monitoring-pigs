@@ -104,14 +104,13 @@ def get_settings():
         "cv_tasks": CV_TASKS,
         "annotation_types": ANNOTATION_TYPES,
         "release_year": RELEASE_YEAR,
-        "homepage_url": HOMEPAGE_URL,
         "preview_image_id": PREVIEW_IMAGE_ID,
         "github_url": GITHUB_URL,
     }
 
     if any([field is None for field in settings.values()]):
         raise ValueError("Please fill all fields in settings.py after uploading to instance.")
-
+    settings["homepage_url"] = HOMEPAGE_URL
     settings["release_date"] = RELEASE_DATE
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
     settings["class2color"] = CLASS2COLOR
