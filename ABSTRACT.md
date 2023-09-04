@@ -10,11 +10,11 @@ The study involved elevating GHG levels in the barn by closing ventilators for s
 
 The experimental setup took place in a controlled pig barn, with specific conditions (see [details](https://www.mdpi.com/2076-2615/11/11/3089/htm#) in the paper) applied to raise GHG concentrations. The study involved five Yorkshire breed pigs, and their conditions were well-documented, including feeding schedules and markings for visual identification. 
 
-The GHG concentrations were measured using gas chromatography, with carbon dioxide (CO2) being the dominant GHG. The concentrations were analyzed before, after, and one hour after treatment. The authors provided data and graphs illustrating the GHG concentrations over time.
+The GHG concentrations were measured using gas chromatography, with carbon dioxide (CO2) being the dominant GHG. The concentrations were analyzed before, after, and one hour after treatment. The authors provided data and graphs illustrating the GHG concentrations of ***CO2_ppm*** and ***CO_NO_CH4_N2O_ppm*** over time.
 
 <img src="https://github.com/supervisely/supervisely/assets/78355358/11814d89-3581-4363-a169-3921dd22653f" alt="image" width="800">
 
-The study also included group-wise pig posture and walking behavior scores, which were assessed by counting the number of pigs exhibiting specific behaviors in each frame before, during, and after treatment. These scores revealed that pig behavior was affected by GHG levels, with increased lateral lying and reduced standing and walking activities during elevated GHG conditions.
+The study also included group-wise pig posture and walking behavior ***score***, which were assessed by counting the number of pigs exhibiting specific behaviors in each frame ***before treatment***, ***during treatment***, and ***after treatment***. These scores revealed that pig behavior was affected by GHG levels, with increased lateral lying and reduced standing and walking activities during elevated GHG conditions.
 
 <img src="https://github.com/supervisely/supervisely/assets/78355358/679ec616-e381-4517-9777-7685549380f5" alt="image" width="800">
 
