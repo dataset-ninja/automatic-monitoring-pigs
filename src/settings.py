@@ -73,7 +73,8 @@ ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with value:str to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
-    "__PRETEXT__": "Every image has information about ***CO2_ppm*** and ***CO_NO_CH4_N2O_ppm*** gas concentrations, while every object has information about it's posture: ***standing pig***, ***sternal lying pig***, ***lateral lying pig***; and it's treatment ***score*** and state: ***before treatment***, ***during treatment***, ***after treatment***"
+    "__PRETEXT__": "Every image has information about ***CO2_ppm*** and ***CO_NO_CH4_N2O_ppm*** gas concentrations, while every object has information about it's posture: ***standing pig***, ***sternal lying pig***, ***lateral lying pig***; and it's treatment ***score*** and state: ***before treatment***, ***during treatment***, ***after treatment***",
+    "__PRETEXT__": "To explore postures and treatments of every pig, run dataset in supervisely",
 }
 TAGS: Optional[List[str]] = None
 
