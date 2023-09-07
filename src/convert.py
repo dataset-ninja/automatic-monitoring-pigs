@@ -17,6 +17,7 @@ from supervisely.io.fs import (
 from tqdm import tqdm
 
 import src.settings as s
+import src.utils as u
 
 
 def convert_and_upload_supervisely_project(
@@ -36,11 +37,16 @@ def convert_and_upload_supervisely_project(
         image_name = get_file_name(image_path)
         image_time = image_name.split(" ")[1]
         image_hour = image_time.split("-")[0]
+        image_hour_decimal = u.time_to_decimal_hour(image_time)
 
-        CO2_data = str(CO2_to_values[image_hour])[1:-1]
-        tag_CO2 = sly.Tag(tag_CO2_meta, value=CO2_data)
-        mix_data = str(mixture_to_values[image_hour])[1:-1]
-        tag_mix = sly.Tag(tag_mixture_of_gases_meta, value=mix_data)
+        CO2_data = u.calculate_y_graph(
+            image_hour_decimal, u.m_values_CO2, u.b_values_CO2, u.x_ranges
+        )
+        tag_CO2 = sly.Tag(tag_CO2_meta, value=int(round(CO2_data, -1)))
+        mix_data = u.calculate_y_graph(
+            image_hour_decimal, u.m_values_mix, u.b_values_mix, u.x_ranges
+        )
+        tag_mix = sly.Tag(tag_mixture_of_gases_meta, value=round(mix_data))
 
         image_np = sly.imaging.image.read(image_path)[:, :, 0]
         img_height = image_np.shape[0]
@@ -87,30 +93,30 @@ def convert_and_upload_supervisely_project(
     tag_ll = sly.TagMeta("lateral lying pig", sly.TagValueType.NONE)
     tag_sl = sly.TagMeta("sternal lying pig", sly.TagValueType.NONE)
 
-    tag_CO2_meta = sly.TagMeta("CO2", sly.TagValueType.ANY_STRING)
-    tag_mixture_of_gases_meta = sly.TagMeta("mixture_of_gases", sly.TagValueType.ANY_STRING)
+    tag_CO2_meta = sly.TagMeta("CO2_ppm", sly.TagValueType.ANY_NUMBER)
+    tag_mixture_of_gases_meta = sly.TagMeta("CO_NO_CH4_ppm", sly.TagValueType.ANY_NUMBER)
 
-    CO2_to_values = {
-        "07": [900, 2150],
-        "08": [2150, 1700],
-        "13": [900, 2000],
-        "14": [2000, 1500],
-        "18": [1300, 1100],
-        "19": [1100, 900],
-        "09": [1700, 1600],
-        "10": [1600, 1300],
-    }
+    # CO2_to_values = {
+    #     "07": [900, 2150],
+    #     "08": [2150, 1700],
+    #     "13": [900, 2000],
+    #     "14": [2000, 1500],
+    #     "18": [1300, 1100],
+    #     "19": [1100, 900],
+    #     "09": [1700, 1600],
+    #     "10": [1600, 1300],
+    # }
 
-    mixture_to_values = {
-        "07": [900, 1500],
-        "08": [1500, 1100],
-        "13": [900, 1400],
-        "14": [1400, 1300],
-        "18": [1100, 900],
-        "19": [900, 800],
-        "09": [1100, 1050],
-        "10": [1050, 1000],
-    }
+    # mixture_to_values = {
+    #     "07": [900, 1500],
+    #     "08": [1500, 1100],
+    #     "13": [900, 1400],
+    #     "14": [1400, 1300],
+    #     "18": [1100, 900],
+    #     "19": [900, 800],
+    #     "09": [1100, 1050],
+    #     "10": [1050, 1000],
+    # }
 
     tag_before = sly.TagMeta("before treatment", sly.TagValueType.NONE)
     tag_during = sly.TagMeta("during treatment", sly.TagValueType.NONE)
