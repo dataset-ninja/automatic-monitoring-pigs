@@ -15,7 +15,7 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "Automatic Monitoring of Pigs"
 PROJECT_NAME_FULL: str = "Automatic Monitoring of Pigs` Physico-Temporal Activities at Different Greenhouse Gas Concentrations"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
