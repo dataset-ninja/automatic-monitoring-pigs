@@ -1,6 +1,6 @@
 Dataset **Automatic Monitoring of Pigs** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/1/F/xg/dnpWUNfiL9yrNrh2UkuQiscXkmwjKwRisyoBFjtMCoM2voB8iRkDPWyIa71txUpo7Ntx6q3TxXXUYxBV5hiQi41zXZIbCAxArV6g0lZxOSvFyNhgvdc0lh3AW6Sh.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/o/R/i2/MZfZLKlTditIKfLBd3HsQ2fApAH7saLVj8yUUGxMnCZqfQtkPcs8td8NLkiAUVJZlhBkWfTnH8cGf9MAj6til4tkUsT0cMI5UHqA7tc2RfZCshHIbkGBaExOiPwJ.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
