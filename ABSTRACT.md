@@ -10,11 +10,11 @@ The study involved elevating GHG levels in the barn by closing ventilators for s
 
 The experimental setup took place in a controlled pig barn, with specific conditions (see [details](https://www.mdpi.com/2076-2615/11/11/3089/htm#) in the paper) applied to raise GHG concentrations. The study involved five Yorkshire breed pigs, and their conditions were well-documented, including feeding schedules and markings for visual identification. 
 
-The GHG concentrations were measured using gas chromatography, with carbon dioxide (CO2) being the dominant GHG. The concentrations were analyzed before, after, and one hour after treatment. The authors provided data and graphs illustrating the GHG concentrations of ***CO2_ppm*** and ***CO_NO_CH4_N2O_ppm*** over time.
+The GHG concentrations were measured using gas chromatography, with carbon dioxide (CO<sub>2</sub>) being the dominant GHG. The concentrations were analyzed before, after, and one hour after treatment. The authors provided data and graphs illustrating the GHG concentrations of ***CO2_ppm*** and ***CO_NO_CH4_N2O_ppm*** over time.
 
 <img src="https://github.com/supervisely/supervisely/assets/78355358/db98fe61-cbd1-40a8-8a1a-8f4e47521612" alt="image" width="800">
 
-<span style="font-size: smaller; font-style: italic;">Average greenhouse gas (GHG) concentrations before, during, and after an hour of treatment. The x-axis represents the time (hh:mm) of day, whereas the left y-axis represents the average CO2 concentration, and the right y-axis represents the average CO, NO, CH4, and N<sub>2</sub>O.</span>
+<span style="font-size: smaller; font-style: italic;">Average greenhouse gas (GHG) concentrations before, during, and after an hour of treatment. The x-axis represents the time (hh:mm) of day, whereas the left y-axis represents the average CO<sub>2</sub> concentration, and the right y-axis represents the average CO, NO, CH<sub>4</sub>, and N<sub>2</sub>O.</span>
 
 The study also included group-wise pig posture and walking behaviour ***score***, which were assessed by counting the number of pigs exhibiting specific behaviours in each frame ***before treatment***, ***during treatment***, and ***after treatment***. These scores revealed that pig behaviour was affected by GHG levels, with increased lateral lying and reduced standing and walking activities during elevated GHG conditions.
 
