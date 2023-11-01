@@ -31,7 +31,7 @@ RELEASE_DATE: Optional[str] = "2021-10-29"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://www.mdpi.com/2076-2615/11/11/3089/htm#"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = 3291082
@@ -52,7 +52,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
-PAPER: Optional[Union[str, List[str]]] = "https://www.mdpi.com/2076-2615/11/11/3089/htm#"
+PAPER: Optional[Union[str, List[str]]] = None
 BLOGPOST: Optional[Union[str, List[str]]] = None
 CITATION_URL: Optional[str] = "https://www.mdpi.com/2076-2615/11/11/3089/htm#"
 AUTHORS: Optional[List[str]] = [
@@ -61,6 +61,7 @@ AUTHORS: Optional[List[str]] = [
     "Moon, Byeong-Eun",
     "Kim, Hyeon-Tae",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["anil.bhujel@gmail.com", "be25moon@naver.com", "bioani@gnu.ac.kr"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
     "Gyeongsang National University, Korea",
@@ -121,6 +122,7 @@ def get_settings():
     settings["blog"] = BLOGPOST
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
